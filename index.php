@@ -3,7 +3,8 @@ ini_set('display_errors',1);
 error_reporting(E_ALL);
 
 // change the following paths if necessary
-$yii=dirname(__FILE__).'/../l.rq/framework/yii.php';
+// $yii=dirname(__FILE__).'/../l.rq/framework/yii.php';
+$yii=dirname(__FILE__).'/framework/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
 
 // remove the following lines when in production mode
