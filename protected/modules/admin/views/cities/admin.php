@@ -1,20 +1,23 @@
 <?php
 $this->breadcrumbs=array(
-	'Structures'=>array('index'),
+	'Cities'=>array('index'),
 	'Manage',
 );
 
+$regions = Regions::model()->findAll('deleted=0');
+$regions = CHtml::listData($regions,'id','name');
+
 $this->menu=array(
 
-	array('label'=>'Добавить специализацию','url'=>array('create')),
+	array('label'=>'Добавить Город','url'=>array('create')),
 );
 
 ?>
 
-<h1>Специализации кампании</h1>
+<h1>Города</h1>
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
-	'id'=>'specialization-grid',
+	'id'=>'city-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
     'type'=>'striped',
@@ -36,7 +39,15 @@ $this->menu=array(
         'headerHtmlOptions'=>array('style'=>'width:30px'),
     ),
 		'name',
-        'type',
+        array('name' => 'region_id',
+            'type' => 'raw',
+            'header'=>'Регион',
+            'value' => function($data){
+                    return Regions::model()->findByPk($data->region_id)->name;
+                },
+            'headerHtmlOptions'=>array('style'=>'width:250px'),
+            'filter' => $regions,
+        ),
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
             'template'=>'{update}{delete}',

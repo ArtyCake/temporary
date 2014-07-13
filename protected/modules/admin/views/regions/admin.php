@@ -14,7 +14,7 @@ $this->menu=array(
 <h1>Области</h1>
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
-	'id'=>'structure-grid',
+	'id'=>'region-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
     'type'=>'striped',
