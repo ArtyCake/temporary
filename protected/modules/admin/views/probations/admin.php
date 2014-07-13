@@ -1,17 +1,17 @@
 <?php
 $this->breadcrumbs=array(
-	'Trainings'=>array('index'),
+	'Probations'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
 
-	array('label'=>'Добавить вид программы обучение','url'=>array('create')),
+	array('label'=>'Добавить направление стажировки','url'=>array('create')),
 );
 
 ?>
 
-<h1>Вид программы Обучение</h1>
+<h1>Направление стажировки</h1>
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
 	'id'=>'region-grid',

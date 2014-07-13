@@ -59,7 +59,7 @@ class Trainings extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'name' => 'Name',
+			'name' => 'Название',
 			'create_user_id' => 'Create User',
 			'create_date' => 'Create Date',
 			'update_user_id' => 'Update User',
@@ -93,7 +93,7 @@ class Trainings extends CActiveRecord
 		$criteria->compare('create_date',$this->create_date,true);
 		$criteria->compare('update_user_id',$this->update_user_id);
 		$criteria->compare('update_date',$this->update_date,true);
-		$criteria->compare('deleted',$this->deleted);
+		$criteria->compare('deleted',0);
 		$criteria->compare('deleted_denied',$this->deleted_denied);
 
 		return new CActiveDataProvider($this, array(

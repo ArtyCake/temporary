@@ -1,6 +1,6 @@
 <?php
 $this->breadcrumbs=array(
-	'Trainings'=>array('index'),
+	'Probations'=>array('index'),
 	$model->name=>array('view','id'=>$model->id),
 	'Update',
 );
@@ -12,9 +12,9 @@ $when_up = ($model->update_date)?Yii::app()->dateFormatter->format('d MMMM yyyy 
 $who_up = ($model->update_date)?Users::model()->findByPk($model->update_user_id)->number:'';
 
 $this->menu=array(
-	array('label'=>'К списку видов программ обучений','url'=>array('index')),
-	array('label'=>'Добавить вид программы обучение','url'=>array('create')),
-	array('label'=>'Удалить вид программы обучение','url'=>array('delete','id'=>$model->id)),
+	array('label'=>'К списку направлений стажировок','url'=>array('index')),
+	array('label'=>'Добавить направление стажировки','url'=>array('create')),
+	array('label'=>'Удалить направление стажировки','url'=>array('delete','id'=>$model->id)),
     '---',
     array('label'=>'Добавил'),
     array('label'=>$who_cr.' '.$when_cr,'icon'=>'user', 'url'=>'')
@@ -26,7 +26,7 @@ if($model->update_date){
 
 ?>
 
-<h1>Редактирование вида программы обучения</h1>
+<h1>Редактирование направления стажировки</h1>
 <h3><?php echo $model->name; ?></h3>
 
 <?php echo $this->renderPartial('_form',array('model'=>$model)); ?>
