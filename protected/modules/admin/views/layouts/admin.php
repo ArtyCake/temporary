@@ -61,6 +61,7 @@
                             array('label'=>'Специализации компании', 'url'=>array('/admin/specializations'),),
                             array('label'=>'Области', 'url'=>array('/admin/regions'),),
                             array('label'=>'Города', 'url'=>array('/admin/cities'),),
+                            array('label'=>'Профессиональные области', 'url'=>array('/admin/professionalAreas'),),
                             )
                         )
                     ),
