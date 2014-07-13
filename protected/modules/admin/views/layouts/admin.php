@@ -59,6 +59,7 @@
                         array('label'=>'Справочники',  'url'=>'#','items'=>array(
                             array('label'=>'Структура компании', 'url'=>array('/admin/structure'),),
                             array('label'=>'Специализации компании', 'url'=>array('/admin/specializations'),),
+                            array('label'=>'Области', 'url'=>array('/admin/regions'),),
                             )
                         )
                     ),
