@@ -62,6 +62,7 @@
                             array('label'=>'Области', 'url'=>array('/admin/regions'),),
                             array('label'=>'Города', 'url'=>array('/admin/cities'),),
                             array('label'=>'Профессиональные области', 'url'=>array('/admin/professionalAreas'),),
+                            array('label'=>'Обучение', 'url'=>array('/admin/trainings'),),
                             )
                         )
                     ),
