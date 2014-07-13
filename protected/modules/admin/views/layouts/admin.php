@@ -58,6 +58,7 @@
                         (in_array($role, array(0,1))) ? array('label'=>'Пользователи', 'url'=>array('/admin/users'),):null,
                         array('label'=>'Справочники',  'url'=>'#','items'=>array(
                             array('label'=>'Структура компании', 'url'=>array('/admin/structure'),),
+                            array('label'=>'Специализации компании', 'url'=>array('/admin/specializations'),),
                             )
                         )
                     ),
